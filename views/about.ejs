@@ -1,0 +1,29 @@
+<%- include("header") -%>
+
+
+<p><strong>A story!</strong><p>
+<p>(click on the button '+' to see full text)</p>
+        <p>Welcome to my personal blog! I'm passionate about travel and adventure, so this blog is a journey through my experiences around the world. From hiking in the Himalayas to savoring street food in Bangkok, I'll share it all. Join me on this exciting exploration of cultures, cuisines, and captivating landscapes.
+            <span id="more-text1" style="display: none;">
+                As I delve into each destination, I'll provide tips, recommendations, and my honest perspective. It's not just about the destinations; it's about the people I meet and the stories I uncover. Subscribe and be part of my global adventures. Let's embark on this incredible odyssey together!
+            </span></p>
+            <button id="toggle-button" onclick="toggleText()" style="margin-left: 50px">+</button>
+
+<script>
+    function toggleText() {
+        var moreText = document.getElementById("more-text1");
+        var buttonText = document.getElementById("toggle-button");
+
+        if (moreText.style.display === "none" || moreText.style.display === "") {
+            moreText.style.display = "inline";
+            buttonText.innerHTML = "-";
+        } else {
+            moreText.style.display = "none";
+            buttonText.innerHTML = "+";
+        }
+    }
+
+</script>
+
+
+<%- include("footer") -%>
